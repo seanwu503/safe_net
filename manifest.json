@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Safe Net AI MVP",
+  "version": "1.0",
+  "description": "Local AI toxicity filter for social feeds.",
+  "background": {
+    "service_worker": "dist/background.js",
+    "type": "module"
+  },
+  "permissions": ["offscreen"],
+  "host_permissions": [
+    "https://huggingface.co/*",
+    "https://cdn.jsdelivr.net/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
