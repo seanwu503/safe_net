@@ -1,6 +1,6 @@
 # Safe Net AI MVP
 
-Safe Net AI MVP is a Chrome extension prototype that scans webpage text and hides content detected as toxic. It uses `@huggingface/transformers` with the `Xenova/toxic-bert` model for local inference.
+Safe Net AI is a Chrome extension prototype that scans webpage text and hides content detected as toxic. It uses `@huggingface/transformers` with the `Xenova/toxic-bert` model for local inference.
 
 ## Setup
 
